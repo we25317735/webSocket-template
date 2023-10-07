@@ -1,0 +1,20 @@
+
+
+#Projects{
+
+
+    header{
+        background-color: #e3dedee1; //透明,之後做滾輪處理
+
+        position: fixed;
+        top: 0;
+        left: 250px; //配合List寬度
+        right: 0;
+        z-index: 2;
+    }
+
+    #Pagination{
+       background-color: #fff;
+       
+    }
+}

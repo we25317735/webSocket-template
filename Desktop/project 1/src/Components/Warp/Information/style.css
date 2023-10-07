@@ -1,0 +1,31 @@
+#Information {
+  width: 100%;
+  min-height: 100%;
+}
+
+#Information header {
+  width: 100%;
+  padding: 1rem;
+  background-color: #eff2f0;
+  -webkit-box-shadow: 1px 1px 1px 1px #e4e4e548;
+          box-shadow: 1px 1px 1px 1px #e4e4e548;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #Information header {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 70px;
+    top: 70px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

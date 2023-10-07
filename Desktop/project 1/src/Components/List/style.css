@@ -1,0 +1,85 @@
+#List {
+  margin-right: 250px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #List {
+    margin-right: 70px;
+  }
+}
+
+#List .list-wrap {
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(234, 232, 232, 0.097);
+          box-shadow: 1px 1px 1px 1px rgba(234, 232, 232, 0.097);
+  position: fixed;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media screen and (max-width: 768px) {
+  #List .list-wrap {
+    width: 100%;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #List .list-wrap header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    margin-right: 20px;
+  }
+}
+
+#List .list-wrap header a {
+  margin-left: 200px;
+  display: inline-block;
+}
+
+#List .list-wrap header a i {
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(89, 87, 87, 0.123);
+          box-shadow: 1px 1px 1px 1px rgba(89, 87, 87, 0.123);
+  background-color: #e6e3e3a4;
+}
+
+#List .list-wrap section ul {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  #List .list-wrap section ul {
+    margin-top: 20px;
+    display: none;
+  }
+}
+
+#List .list-wrap section ul li {
+  border-radius: 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#List .list-wrap section ul li:hover {
+  border-radius: 0;
+  background-color: #ab4343;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media screen and (max-width: 768px) {
+  #List .list-wrap section ul li {
+    border-radius: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

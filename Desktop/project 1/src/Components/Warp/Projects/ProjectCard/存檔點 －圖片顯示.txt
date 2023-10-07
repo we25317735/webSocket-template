@@ -1,0 +1,66 @@
+import React, { useState, useEffect} from 'react';
+import "./style.css";
+import "./Record.css";
+
+import * as CardPicture from './CardPicture/Img'; // 導入图片
+
+/* 用import的方式把圖片載入 */
+const ProjectCard = (props) => {
+
+    const ID = props.data.id;
+    const CoverPicture = props.data.TitlePicture; //封面圖片
+    const PictureLength = props.data.PreviewPicture.length; //輪播圖片長度
+    const [imageArray, setImageArray] = useState([]); //輪播圖片
+
+    const [CardHover, setCardHover] = useState(false); //hover開關
+    
+    useEffect(() => { // 在組件渲染時，根據 "輪播圖片長度" 更新 imageArray
+        const newImageArray = [];
+        for (let i = 1; i <= PictureLength; i++) {
+            newImageArray.push(CardPicture[`img00${ID}_${i}`]);
+        }
+        setImageArray(newImageArray);
+    }, [ID, PictureLength]);
+
+    
+    //以下2個用 "!" 寫法會出問題
+    const MouseEnter = () => { 
+        setCardHover(true);
+    };
+    const MouseLeave = () => { 
+        setCardHover(false);
+    };
+
+    // console.log(CardHover ? "開啟":"關閉")
+
+    return (
+        <div id='ProjectCard' className='col-4'>
+            <a href="#">
+                <div id="card-component" className='mx-auto mt-3 mb-1' onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>
+                    <div className="card-module">
+                        <div className="title">
+                            <div className="cat">{props.data.title}</div>
+
+                                {
+                                    CardHover ? (
+                                        <h1>你好</h1>
+                                    ) : (
+                                        <div className="cover" style={{ backgroundImage: `url(${CardPicture[CoverPicture]})` }}>
+                                        </div>
+                                    )
+                                }
+                                
+                        </div>
+                        <div className="body">
+                            <h2 className="chapter">{props.data.title}</h2>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    );
+}
+
+export default ProjectCard;
+
+

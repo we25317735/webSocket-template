@@ -1,0 +1,175 @@
+$main: #00BAFF;
+$main-hover: #008BBF;
+$grey: #999;
+$bdrs: 6px;
+$tran: all ease .5s;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+#card-component{
+    
+  
+
+    .container {
+        margin: 20px auto;
+        width: 400px;
+        letter-spacing: .5px;
+
+        transform: scale(.5); //重點: 更改圖片大小
+      }
+      
+      footer {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        text-align: center;
+        
+        a {
+          color: $main;
+          
+          &:hover {
+            color: $main-hover;
+          }
+        }
+      }
+      
+      // card style
+      .card-module {
+        border-radius: $bdrs;
+        border-right: 1.5px solid rgba(black, .1);
+        border-bottom: 1.5px solid rgba(black, .1);
+        
+        // title
+        .title {
+          position: relative;
+          width: 100%;
+          border-top-left-radius: $bdrs;
+          border-top-right-radius: $bdrs;
+          
+          .cat {
+            position: absolute;
+            top: 5%;
+            left: 0;
+            padding: 2% 12% 2% 2%;
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            font-size: 14px;
+
+            z-index: 2;
+          }
+          
+          .cover {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top-left-radius: $bdrs;
+            border-top-right-radius: $bdrs;
+          }
+
+
+
+        }
+        
+        // body
+        .body {
+          padding: 16px;
+          background: #FFF;
+          
+          .chapter {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 24px;
+          }
+          
+          .content {
+            margin: 0 0 4px;
+            line-height: 1.25;
+            font-size: 16px;
+            //
+            overflow: hidden;
+          }
+        }
+        
+        // footer
+        .footer {
+          position: relative;
+          display: flex;
+          padding: 16px;
+          background: #FFF;
+          border-bottom-left-radius: $bdrs;
+          border-bottom-right-radius: $bdrs;
+          
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, rgba(204,204,204,0) 0%,rgba(204,204,204,0) 20%,rgba(221,221,221,1) 50%,rgba(204,204,204,0) 80%,rgba(204,204,204,0) 100%);
+          }
+          
+          .favor {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 75%;
+          }
+          
+          .link {
+            width: 25%;
+            text-align: right;
+          }
+          
+          .icon {
+            display: flex;
+            font-size: 14px;
+            
+            &.read {
+              margin-right: 8px;
+            }
+            
+            .svg, span {
+              margin-right: 4px;
+              color: $grey;
+            }
+            
+            svg {
+              width: 16px;
+              height: 16px;
+              
+              path {
+                fill: $grey;
+              }
+            }
+            
+            span {
+              display: inline-block;
+            }
+          }
+        }
+        
+        .link a {
+          display: inline-block;
+          padding: 8px 24px;
+          border-radius: $bdrs;
+          text-decoration: none;
+          color: rgba($main, .87);
+          transition: $tran;
+          
+          &:hover, &:active {
+            background: rgba($main, .24);
+            color: $main-hover;
+          }
+        }
+      }
+}
+
+

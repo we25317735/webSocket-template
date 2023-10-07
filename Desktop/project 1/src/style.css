@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+  
+
+body{
+    background-color: #e4e3e3ae;
+}
+
+a {
+    text-decoration: none; /* 移除下划线 */
+    color: inherit; /* 使用父元素的文本颜色 */
+}
+
+/* 修改链接在鼠标悬停时的样式 */
+a:hover {
+    text-decoration: none;
+}

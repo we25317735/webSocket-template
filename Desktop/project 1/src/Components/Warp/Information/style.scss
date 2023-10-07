@@ -1,0 +1,33 @@
+$md-lg: 768px;
+
+#Information{
+
+    width: 100%;
+    min-height: 100%;
+    
+
+    header{
+        width: 100%; //跟以下定位 left: 0; 相關
+        padding: 1rem;
+        background-color: #eff2f0;
+        box-shadow: 1px 1px 1px 1px #e4e4e548;
+        
+        display: flex;
+        justify-content: end;
+
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        @media screen and (max-width: $md-lg) {
+            position: sticky;
+            height: 70px;
+            top: 70px; //配合List組件header高度
+        
+        }
+
+      
+    }
+
+}
